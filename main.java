@@ -1,7 +1,6 @@
 public class main {
 
-    public static void main(int args[]) {
-
+    public static void main(string args[]) {
 
     }
 }
