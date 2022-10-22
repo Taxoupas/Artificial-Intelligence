@@ -1,5 +1,14 @@
+import java.util.HashMap; // import the HashMap class
 public class Cube {
 
+
+private HashMap<String, Intiger> Colours= new HashMap<String, intiger>();
+    Colours.put("Red",0);
+    Colours.put("Green",0);
+    Colours.put("Blue",0);
+    Colours.put("Yellow",0);
+    Colours.put("White",0);
+    Colours.put("Black",0);
     private String Colours = {"Red","Green","Blue","Yellow","White","Black"};
     private int counters = {0,0,0,0,0,0};
     private String[][][] Cube = new String[3][3][6];

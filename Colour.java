@@ -12,7 +12,7 @@ public class Colour{
         this.colour = colour;
     }
 
-    public String SetColour(String colour){
+    public String getColour(String colour){
         return this.colour;
     }
 
