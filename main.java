@@ -1,4 +1,20 @@
+
 public class main {
 
- public static void main(int args[]) {
+	public static void main(String[] args) {
+		
+		Cube cb = new Cube();
+		
+		
+		System.out.println(cb.Colours.get(1));
+		System.out.println(cb.Colours.get(2));
+		System.out.println(cb.Colours.get(3));
+		System.out.println(cb.Colours.get(4));
+		System.out.println(cb.Colours.get(5));
+		System.out.println(cb.Colours.get(6));
+
+	}
+
+}
+
         
