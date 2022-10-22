@@ -1,16 +1,16 @@
-import java.util.HashMap; // import the HashMap class
+import java.util.HashMap;
+
 public class Cube {
 
-
-private HashMap<String, Intiger> Colours= new HashMap<String, intiger>();
+    private HashMap<String, Integer> Colours = new HashMap<String, Integer>();
     Colours.put("Red",0);
-    Colours.put("Green",0);
+    Colours.put("White",0);
     Colours.put("Blue",0);
     Colours.put("Yellow",0);
-    Colours.put("White",0);
-    Colours.put("Black",0);
-    private String Colours = {"Red","Green","Blue","Yellow","White","Black"};
-    private int counters = {0,0,0,0,0,0};
+    Colours.put("Orange",0);
+    Colours.put("Green",0);
+
+
     private String[][][] Cube = new String[3][3][6];
 
     public Cube() {
@@ -23,12 +23,12 @@ private HashMap<String, Intiger> Colours= new HashMap<String, intiger>();
         }
     }
 
-    public getColour(int x, int y, int z) {
+    public String GetColour(int x, int y, int z) {
 
         return Cube[x][y][z];
     }  // get the colour of a specific square in the cube
 
-    public setColour(int x, int y, int z, String colour) {
+    public void SetColour(int x, int y, int z, String colour) {
 
         Cube[x][y][z] = colour;
 

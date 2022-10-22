@@ -1,6 +1,7 @@
 public class Colour{
+
     private String  colour;
-    private int Counter;
+    private int counter;
 
 
     public void Colour(String colour){
@@ -12,7 +13,7 @@ public class Colour{
         this.colour = colour;
     }
 
-    public String getColour(String colour){
+    public String GetColour(String colour){
         return this.colour;
     }
 
