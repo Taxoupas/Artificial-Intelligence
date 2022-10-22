@@ -1,5 +1,7 @@
 public class Cube {
 
+    private Colours = {"Red","Green","Blue","Yellow","White","Black"};
+    private counters = {0,0,0,0,0,0};
     private String[][][] Cube = new String[3][3][6];
 
     public Cube() {
@@ -17,12 +19,11 @@ public class Cube {
         return Cube[x][y][z];
     }  
 
-    public setColor(int x, int y, int z, String colour) {
+    public setColour(int x, int y, int z, String colour) {
 
         Cube[x][y][z] = colour;
 
     }
 
-    
 
 }
