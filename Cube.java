@@ -46,5 +46,55 @@ public class Cube {
 
 	    } // set the colour of a specific square in the cube
 
+        public void print_cube() {
+            System.out.print("     ");
+            System.out.print("Side A");
+            System.out.print("    ");
+            System.out.print("Side B");
+            System.out.print("    ");
+            System.out.print("Side C");
+            for (int y=0; y<3; y++) {
+                System.out.println("");
+                for (int z=0; z<3; z++) {
+                    System.out.print("     ");
+                    for (int x=0; x<3; x++) {
+                        if (x==0) { System.out.print("[");}
+                        
+                        System.out.print(Cube[x][y][z]);
+
+                        if (x==2) { System.out.print("]");}
+                    }
+                }
+            }
+
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+            
+            System.out.print("     ");
+            System.out.print("Side D");
+            System.out.print("     ");
+            System.out.print("Side E");
+            System.out.print("    ");
+            System.out.print("Side F");
+            for (int y=0; y<3; y++) {
+                System.out.println("");
+                for (int z=3; z<6; z++) {
+                    System.out.print("     ");
+                    for (int x=0; x<3; x++) {
+                        if (x==0) { System.out.print("[");}
+                        
+                        System.out.print(Cube[x][y][z]);
+
+                        if (x==2) { System.out.print("] ");}
+                    }
+                }
+            }
+
+            
+            
+
+        } // print the cube on the terminal
+
 
 	}

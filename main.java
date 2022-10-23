@@ -13,6 +13,8 @@ public class main {
 		System.out.println(cb.Colours.get(5));
 		System.out.println(cb.Colours.get(6));
 
+        cb.print_cube();
+
 	}
 
 }
