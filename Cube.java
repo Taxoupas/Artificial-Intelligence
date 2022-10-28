@@ -111,28 +111,114 @@ public class Cube {
         }
 
         //-------------------Moves-------------------//
+		
+        public void vertical_left(String direction) {
 
-        public void vertical_left(String direction) {}
+			temp1 = Cube[0][0][0];
+			temp2 = Cube[1][0][0];
+			temp3 = Cube[2][0][0];
 
-        public void vertical_middle(String direction) {}
+			if (direction == "up"){
+			
+			}else if(direction == "up"){
 
-        public void vertical_right(String direction) {}
+			}
+		}
+
+        public void vertical_middle(String direction) {
+			for (int z=0; z<=3; z++){
+				int temp1 = Cube[0][1][z+1];
+				int temp2 = Cube[1][1][z+1];
+				int temp3 = Cube[2][1][z+1];
+
+				if (direction == "up"){
+					
+					
+
+				
+				}else if(direction == "down"){
+
+				}
+			}
+		}
+
+        public void vertical_right(String direction) {
+
+			int temp1 = Cube[0][2][0];
+			int temp2 = Cube[1][2][0];
+			int temp3 = Cube[2][2][0];
+
+			if (direction == "up"){
+			
+			}else if(direction == "down"){
+
+			}
+			
+		}
 
 
 
-        public void horizontal_bottom(String direction) {}
+        public void horizontal_bottom(String direction) {
 
-        public void horizontal_middle(String direction) {}
+			if (direction == "right"){
 
-        public void horizontal_top(String direction) {}
+			}else if(direction == "left"){
+
+			}
+			
+		}
+
+        public void horizontal_middle(String direction) {
+
+			if (direction == "right"){
+
+			}else if(direction == "left"){
+
+			}
+
+		}
+
+        public void horizontal_top(String direction) {
+
+			if (direction == "right"){
+
+			}else if(direction == "left"){
+
+			}
+
+		}
 
 
 
-        public void behind_behind(String direction) {}
+        public void behind_behind(String direction) {
 
-        public void behind_middle(String direction) {}
+			if (direction == 'right'){
 
-        public void behind_front(String direction) {}
+			}else if(direction == 'left'){
+
+			}
+
+		}
+
+        public void behind_middle(String direction) {
+
+			if (direction == 'right'){
+
+			}else if(direction == 'left'){
+
+			}
+
+		}
+
+        public void behind_front(String direction) {
+
+			if (direction == 'right'){
+
+			}else if(direction == 'left'){
+
+			}
+
+		}
 
 
 
