@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.HashMap;
 import java.util.Random;
 
 public class Cube {
@@ -53,16 +54,16 @@ public class Cube {
             System.out.print("Side B");
             System.out.print("    ");
             System.out.print("Side C");
-            for (int y=0; y<3; y++) {
+            for (int x=0; x<3; x++) {
                 System.out.println("");
                 for (int z=0; z<3; z++) {
                     System.out.print("     ");
-                    for (int x=0; x<3; x++) {
-                        if (x==0) { System.out.print("[");}
+                    for (int y=0; y<3; y++) {
+                        if (y==0) { System.out.print("[");}
                         
                         System.out.print(Cube[x][y][z]);
 
-                        if (x==2) { System.out.print("]");}
+                        if (y==2) { System.out.print("]");}
                     }
                 }
             }
@@ -111,44 +112,79 @@ public class Cube {
         }
 
         //-------------------Moves-------------------//
+        
+        int temp[][] = new int[3][4]; // [x][z]
 		
         public void vertical_left(String direction) {
-
-			temp1 = Cube[0][0][0];
-			temp2 = Cube[1][0][0];
-			temp3 = Cube[2][0][0];
+        	
+        	for (int z=0; z<=3; z++){
+        		for(int x=0; x<=2; x++) {
+        			temp[x][z] = Cube[x][0][z];
+        		}
+			}
 
 			if (direction == "up"){
+				
+				for(int k=0; k<=3; k++) { // z
+					for(int l=0; l<=2; l++) { // x
+						if(k==0) {
+							Cube[l][0][k] = temp[l][3];
+						}else {
+							Cube[l][0][k] = temp[l][k-1];
+						}
+					}
+				}
 			
-			}else if(direction == "up"){
+			}else if(direction == "down"){
 
 			}
 		}
 
         public void vertical_middle(String direction) {
-			for (int z=0; z<=3; z++){
-				int temp1 = Cube[0][1][z+1];
-				int temp2 = Cube[1][1][z+1];
-				int temp3 = Cube[2][1][z+1];
-
-				if (direction == "up"){
+        	
+        	for (int z=0; z<=3; z++){
+        		for(int x=0; x<=2; x++) {
+        			temp[x][z] = Cube[x][1][z];
+        		}
+			}
+				
+        	if (direction == "up"){
 					
-					
+        		for(int k=0; k<=3; k++) { // z
+					for(int l=0; l<=2; l++) { // x
+						if(k==0) {
+							Cube[l][1][k] = temp[l][3];
+						}else {
+							Cube[l][1][k] = temp[l][k-1];
+						}
+					}
+				}	
 
 				
-				}else if(direction == "down"){
+			}else if(direction == "down"){
 
-				}
 			}
 		}
 
         public void vertical_right(String direction) {
-
-			int temp1 = Cube[0][2][0];
-			int temp2 = Cube[1][2][0];
-			int temp3 = Cube[2][2][0];
-
+        	
+        	for (int z=0; z<=3; z++){
+        		for(int x=0; x<=2; x++) {
+        			temp[x][z] = Cube[x][2][z];
+        		}
+			}
+        	
 			if (direction == "up"){
+				
+				for(int k=0; k<=3; k++) { // z
+					for(int l=0; l<=2; l++) { // x
+						if(k==0) {
+							Cube[l][2][k] = temp[l][3];
+						}else {
+							Cube[l][2][k] = temp[l][k-1];
+						}
+					}
+				}
 			
 			}else if(direction == "down"){
 
@@ -192,9 +228,9 @@ public class Cube {
 
         public void behind_behind(String direction) {
 
-			if (direction == 'right'){
+			if (direction == "right"){
 
-			}else if(direction == 'left'){
+			}else if(direction == "left"){
 
 			}
 
@@ -202,9 +238,9 @@ public class Cube {
 
         public void behind_middle(String direction) {
 
-			if (direction == 'right'){
+			if (direction == "right"){
 
-			}else if(direction == 'left'){
+			}else if(direction == "left"){
 
 			}
 
@@ -212,9 +248,9 @@ public class Cube {
 
         public void behind_front(String direction) {
 
-			if (direction == 'right'){
+			if (direction == "right"){
 
-			}else if(direction == 'left'){
+			}else if(direction == "left"){
 
 			}
 
