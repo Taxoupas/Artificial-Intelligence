@@ -97,4 +97,43 @@ public class Cube {
         } // print the cube on the terminal
 
 
+        public boolean check_side(int side) {
+            int temp = Cube[1][1][side];
+            for (int x=0; x<3; x++) {
+                for (int y=0; y<3; y++) {
+                    if (temp != Cube[x][y][side]) {
+                        return false; // side doesnt have the same colour
+                    }
+                }
+            }
+
+            return true; // side has the same colour
+        }
+
+        //-------------------Moves-------------------//
+
+        public void vertical_left(String direction) {}
+
+        public void vertical_middle(String direction) {}
+
+        public void vertical_right(String direction) {}
+
+
+
+        public void horizontal_bottom(String direction) {}
+
+        public void horizontal_middle(String direction) {}
+
+        public void horizontal_top(String direction) {}
+
+
+
+        public void behind_behind(String direction) {}
+
+        public void behind_middle(String direction) {}
+
+        public void behind_front(String direction) {}
+
+
+
 	}
