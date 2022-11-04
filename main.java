@@ -14,8 +14,8 @@ public class main {
 		System.out.println(cb.Colours.get(6));
 		
 		cb.print_cube();
-		String direction = "up";
-		cb.vertical_left(direction);
+		String direction = "Right";
+		cb.horizontal_middle(direction);
 		System.out.println("\n");
 		cb.print_cube();
 

@@ -64,27 +64,12 @@ public class Cube {
 		} // print the cube on the terminal
         //-------------------Moves-------------------//
         
-        int temp[][] = new int[3][4]; // [x][z]
 		
         public void vertical_left(String direction) {
-        	
-        	for (int z=0; z<=3; z++){
-        		for(int x=0; x<=2; x++) {
-        			temp[x][z] = Cube[x][0][z];
-        		}
-			}
 
 			if (direction == "up"){
 				
-				for(int k=0; k<=3; k++) { // z
-					for(int l=0; l<=2; l++) { // x
-						if(k==0) {
-							Cube[l][0][k] = temp[l][3];
-						}else {
-							Cube[l][0][k] = temp[l][k-1];
-						}
-					}
-				}
+
 			
 			}else if(direction == "down"){
 
@@ -92,51 +77,80 @@ public class Cube {
 		}
 
         public void vertical_middle(String direction) {
-        	
-        	for (int z=0; z<=3; z++){
-        		for(int x=0; x<=2; x++) {
-        			temp[x][z] = Cube[x][1][z];
-        		}
-			}
+
+        	int temp1,temp2,temp3,temp4,temp5,temp6,temp7,temp8,temp9;
 				
         	if (direction == "up"){
 					
-        		for(int k=0; k<=3; k++) { // z
-					for(int l=0; l<=2; l++) { // x
-						if(k==0) {
-							Cube[l][1][k] = temp[l][3];
-						}else {
-							Cube[l][1][k] = temp[l][k-1];
-						}
-					}
-				}	
+        		temp1 = Cube[0][1][1];
+				temp2= Cube[1][1][1];
+				temp3 = Cube[2][1][1];
+
+				Cube[0][1][1] = Cube[0][1][0];
+				Cube[1][1][1] = Cube[1][1][0];
+				Cube[2][1][1] = Cube[2][1][0];
+
+				temp4 = Cube[0][1][2];
+			 	temp5 = Cube[1][1][2];
+			    temp6 = Cube[2][1][2];
+
+				Cube[2][1][2] = temp1;
+				Cube[1][1][2] = temp2;
+				Cube[0][1][2] = temp3;
+
+				temp7 = Cube[0][1][3];
+				temp8 = Cube[1][1][3];
+				temp9 = Cube[2][1][3];
+
+				Cube[2][1][3] = temp4; 
+				Cube[1][1][3] = temp5;
+				Cube[0][1][3] = temp6;
+
+				Cube[0][1][0] = temp7;
+				Cube[1][1][0] = temp8;
+				Cube[2][1][0] = temp9;
 
 				
 			}else if(direction == "down"){
+
+				temp1 = Cube[0][1][3];
+				temp2 = Cube[1][1][3];
+				temp3 = Cube[2][1][3];
+
+				Cube[0][1][3] = Cube[0][1][0];
+				Cube[1][1][3] = Cube[1][1][0];
+				Cube[2][1][3] = Cube[2][1][0];
+
+				temp4 = Cube[0][1][2];
+			 	temp5 = Cube[1][1][2];
+			    temp6 = Cube[2][1][2];
+
+				Cube[2][1][2] = temp1;
+				Cube[1][1][2] = temp2;
+				Cube[0][1][2] = temp3;
+
+				temp7 = Cube[0][1][1];
+				temp8 = Cube[1][1][1];
+				temp9 = Cube[2][1][1];
+
+				Cube[2][1][1] = temp4; 
+				Cube[1][1][1] = temp5;
+				Cube[0][1][1] = temp6;
+
+				Cube[0][1][0] = temp7;
+				Cube[1][1][0] = temp8;
+				Cube[2][1][0] = temp9;
 
 			}
 		}
 
         public void vertical_right(String direction) {
         	
-        	for (int z=0; z<=3; z++){
-        		for(int x=0; x<=2; x++) {
-        			temp[x][z] = Cube[x][2][z];
-        		}
-			}
+        	
         	
 			if (direction == "up"){
 				
-				for(int k=0; k<=3; k++) { // z
-					for(int l=0; l<=2; l++) { // x
-						if(k==0) {
-							Cube[l][2][k] = temp[l][3];
-						}else {
-							Cube[l][2][k] = temp[l][k-1];
-						}
-					}
-				}
-			
+
 			}else if(direction == "down"){
 
 			}
