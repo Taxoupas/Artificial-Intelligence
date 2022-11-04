@@ -47,70 +47,21 @@ public class Cube {
 
 	    } // set the colour of a specific square in the cube
 
-        public void print_cube() {
-            System.out.print("     ");
-            System.out.print("Side A");
-            System.out.print("    ");
-            System.out.print("Side B");
-            System.out.print("    ");
-            System.out.print("Side C");
-            for (int x=0; x<3; x++) {
-                System.out.println("");
-                for (int z=0; z<3; z++) {
-                    System.out.print("     ");
-                    for (int y=0; y<3; y++) {
-                        if (y==0) { System.out.print("[");}
-                        
-                        System.out.print(Cube[x][y][z]);
-
-                        if (y==2) { System.out.print("]");}
-                    }
-                }
-            }
-
-            System.out.println("");
-            System.out.println("");
-            System.out.println("");
-            
-            System.out.print("     ");
-            System.out.print("Side D");
-            System.out.print("     ");
-            System.out.print("Side E");
-            System.out.print("    ");
-            System.out.print("Side F");
-            for (int y=0; y<3; y++) {
-                System.out.println("");
-                for (int z=3; z<6; z++) {
-                    System.out.print("     ");
-                    for (int x=0; x<3; x++) {
-                        if (x==0) { System.out.print("[");}
-                        
-                        System.out.print(Cube[x][y][z]);
-
-                        if (x==2) { System.out.print("] ");}
-                    }
-                }
-            }
-
-            
-            
-
-        } // print the cube on the terminal
-
-
-        public boolean check_side(int side) {
-            int temp = Cube[1][1][side];
-            for (int x=0; x<3; x++) {
-                for (int y=0; y<3; y++) {
-                    if (temp != Cube[x][y][side]) {
-                        return false; // side doesnt have the same colour
-                    }
-                }
-            }
-
-            return true; // side has the same colour
-        }
-
+		public void print_cube() {
+			for (int z = 0; z < 6; z++) {
+				System.out.println();
+				System.out.println("Side" + z);
+				for (int x = 0; x < 3; x++) {
+	
+					for (int y = 0; y < 3; y++) {
+	
+						System.out.print(Cube[x][y][z]);
+					}
+					System.out.println();
+				}
+			}
+	
+		} // print the cube on the terminal
         //-------------------Moves-------------------//
         
         int temp[][] = new int[3][4]; // [x][z]
