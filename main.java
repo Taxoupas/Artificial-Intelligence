@@ -15,7 +15,7 @@ public class main {
 		
 		cb.print_cube();
 		String direction = "down";
-		cb.vertical_left(direction);
+		cb.vertical_right(direction);
 		System.out.println("\n");
 		cb.print_cube();
 

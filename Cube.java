@@ -266,6 +266,21 @@ public class Cube {
 				Cube[1][2][0] = temp8;
 				Cube[2][2][0] = temp9;
 				
+				temp1 = Cube[0][2][4];
+				Cube[0][2][4] = Cube[0][0][4];
+				temp2 = Cube[2][2][4];
+				Cube[2][2][4] = temp1;
+				temp3 = Cube[2][0][4];
+				Cube[2][0][4] = temp2;
+				Cube[0][0][4] = temp3;
+				temp4 = Cube[0][1][4];
+				Cube[0][1][4] = Cube[1][0][4];
+				temp5 = Cube[1][2][4];
+				Cube[1][2][4] = temp4;
+				temp6 = Cube[2][1][4];
+				Cube[2][1][4] = temp5;
+				Cube[1][0][4] = temp6;
+				
 
 			}else if(direction == "down"){
 				
@@ -296,6 +311,21 @@ public class Cube {
 				Cube[0][2][0] = temp7;
 				Cube[1][2][0] = temp8;
 				Cube[2][2][0] = temp9;
+				
+				temp1 = Cube[2][0][4];
+				Cube[2][0][4] = Cube[0][0][4];
+				temp2 = Cube[2][2][4];
+				Cube[2][2][4] = temp1;
+				temp3 = Cube[0][2][4];
+				Cube[0][2][4] = temp2;
+				Cube[0][0][4] = temp3;
+				temp4 = Cube[2][1][4];
+				Cube[2][1][4] = Cube[1][0][4];
+				temp5 = Cube[1][2][4];
+				Cube[1][2][4] = temp4;
+				temp6 = Cube[0][1][4];
+				Cube[0][1][4] = temp5;
+				Cube[1][0][4] = temp6;
 				
 			}
 			
@@ -637,10 +667,6 @@ public class Cube {
 			}
 
 		}
-
-
-
-
 
 
 
