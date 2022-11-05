@@ -638,36 +638,296 @@ public class Cube {
 
 
 
-        public void behind_behind(String direction) {
+		public void behind_behind(String direction) {
 
-			if (direction == "right"){
-
-			}else if(direction == "left"){
-
+			if (direction.equals("right")) {
+	
+				// save the values of face 1
+				int temp1 = Cube[0][0][1];
+				int temp2 = Cube[0][1][1];
+				int temp3 = Cube[0][2][1];
+	
+				// face 4 go to fase 1
+				Cube[0][0][1] = Cube[0][2][4];
+				Cube[0][1][1] = Cube[1][2][4];
+				Cube[0][2][1] = Cube[2][2][4];
+	
+				// save the values of face 5
+				int temp4 = Cube[0][2][5];
+				int temp5 = Cube[1][2][5];
+				int temp6 = Cube[2][2][5];
+	
+				// face 1 go to face 5
+				Cube[0][2][5] = temp1;
+				Cube[1][2][5] = temp2;
+				Cube[2][2][5] = temp3;
+	
+				// save the values of face 3
+				int temp7 = Cube[0][2][3];
+				int temp8 = Cube[1][2][3];
+				int temp9 = Cube[2][2][3];
+	
+				// face 5 go to face 3
+				Cube[0][2][3] = temp4;
+				Cube[1][2][3] = temp5;
+				Cube[2][2][3] = temp6;
+	
+				// face 3 to face 4
+				Cube[0][2][4] = temp7;
+				Cube[1][2][4] = temp8;
+				Cube[2][2][4] = temp9;
+	
+				// rotation of face 2
+				rotate(Cube, 2, "right");
+	
+			} else if (direction.equals("left")) {
+	
+				// save the values of face 4
+				int temp1 = Cube[0][2][4];
+				int temp2 = Cube[1][2][4];
+				int temp3 = Cube[2][2][4];
+	
+				// face 1 go to fase 4
+				Cube[0][2][4] = Cube[0][0][1];
+				Cube[1][2][4] = Cube[0][1][1];
+				Cube[2][2][4] = Cube[0][2][1];
+	
+				// save the values of face 3
+				int temp4 = Cube[0][2][3];
+				int temp5 = Cube[1][2][3];
+				int temp6 = Cube[2][2][3];
+	
+				// face 4 go to face 3
+				Cube[0][2][3] = temp1;
+				Cube[1][2][3] = temp2;
+				Cube[2][2][3] = temp3;
+	
+				// save the values of face 5
+				temp1 = Cube[0][2][5];
+				temp2 = Cube[1][2][5];
+				temp3 = Cube[2][2][5];
+	
+				// face 3 to face 5
+				Cube[0][2][5] = temp4;
+				Cube[1][2][5] = temp5;
+				Cube[2][2][5] = temp6;
+	
+				// face 5 to 1
+				Cube[0][0][1] = temp1;
+				Cube[0][1][1] = temp2;
+				Cube[0][2][1] = temp3;
+	
+				// rotation of face 2
+				rotate(Cube, 2, "left");
 			}
-
+	
 		}
 
-        public void behind_middle(String direction) {
-
-			if (direction == "right"){
-
-			}else if(direction == "left"){
-
+		public void behind_middle(String direction) {
+			if (direction.equals("left")) {
+	
+				// save the values of face 1
+				int temp1 = Cube[1][0][1];
+				int temp2 = Cube[1][1][1];
+				int temp3 = Cube[1][2][1];
+	
+				// face 4 go to fase 1
+				Cube[1][0][1] = Cube[0][1][4];
+				Cube[1][1][1] = Cube[1][1][4];
+				Cube[1][2][1] = Cube[2][1][4];
+	
+				// save the values of face 5
+				int temp4 = Cube[0][1][5];
+				int temp5 = Cube[1][1][5];
+				int temp6 = Cube[2][1][5];
+	
+				// face 1 go to face 5
+				Cube[0][1][5] = temp1;
+				Cube[1][1][5] = temp2;
+				Cube[2][1][5] = temp3;
+	
+				// save the values of face 3
+				int temp7 = Cube[0][1][3];
+				int temp8 = Cube[1][1][3];
+				int temp9 = Cube[2][1][3];
+	
+				// face 5 go to face 3
+				Cube[0][1][3] = temp4;
+				Cube[1][1][3] = temp5;
+				Cube[2][1][3] = temp6;
+	
+				// face 3 to face 4
+				Cube[0][1][4] = temp7;
+				Cube[1][1][4] = temp8;
+				Cube[2][1][4] = temp9;
+	
+			} else if (direction.equals("right")) {
+	
+				// save the values of face 4
+				int temp1 = Cube[0][1][4];
+				int temp2 = Cube[1][1][4];
+				int temp3 = Cube[2][1][4];
+	
+				// face 1 go to fase 4
+				Cube[0][1][4] = Cube[1][0][1];
+				Cube[1][1][4] = Cube[1][1][1];
+				Cube[2][1][4] = Cube[1][2][1];
+	
+				// save the values of face 3
+				int temp4 = Cube[0][1][3];
+				int temp5 = Cube[1][1][3];
+				int temp6 = Cube[2][1][3];
+	
+				// face 4 go to face 3
+				Cube[0][1][3] = temp1;
+				Cube[1][1][3] = temp2;
+				Cube[2][1][3] = temp3;
+	
+				// save the values of face 5
+				temp1 = Cube[0][1][5];
+				temp2 = Cube[1][1][5];
+				temp3 = Cube[2][1][5];
+	
+				// face 3 to face 5
+				Cube[0][1][5] = temp4;
+				Cube[1][1][5] = temp5;
+				Cube[2][1][5] = temp6;
+	
+				// face 5 to 1
+				Cube[1][0][1] = temp1;
+				Cube[1][1][1] = temp2;
+				Cube[1][2][1] = temp3;
+	
 			}
-
+	
 		}
 
-        public void behind_front(String direction) {
+		public void behind_front(String direction) {
 
-			if (direction == "right"){
-
-			}else if(direction == "left"){
-
+			if (direction.equals("left")) {
+	
+				// save the values of face 1
+				int temp1 = Cube[2][0][1];
+				int temp2 = Cube[2][1][1];
+				int temp3 = Cube[2][2][1];
+	
+				// face 4 go to fase 1
+				Cube[2][0][1] = Cube[0][2][4];
+				Cube[2][1][1] = Cube[1][2][4];
+				Cube[2][2][1] = Cube[2][2][4];
+	
+				// save the values of face 5
+				int temp4 = Cube[0][2][5];
+				int temp5 = Cube[1][2][5];
+				int temp6 = Cube[2][2][5];
+	
+				// face 1 go to face 5
+				Cube[0][2][5] = temp1;
+				Cube[1][2][5] = temp2;
+				Cube[2][2][5] = temp3;
+	
+				// save the values of face 3
+				int temp7 = Cube[0][2][3];
+				int temp8 = Cube[1][2][3];
+				int temp9 = Cube[2][2][3];
+	
+				// face 5 go to face 3
+				Cube[0][2][3] = temp4;
+				Cube[1][2][3] = temp5;
+				Cube[2][2][3] = temp6;
+	
+				// face 3 to face 4
+				Cube[0][2][4] = temp7;
+				Cube[1][2][4] = temp8;
+				Cube[2][2][4] = temp9;
+	
+				// rotation of face 0
+				rotate(Cube, 0, "left");
+	
+			} else if (direction.equals("right")) {
+	
+				// save the values of face 4
+				int temp1 = Cube[0][0][4];
+				int temp2 = Cube[1][0][4];
+				int temp3 = Cube[2][0][4];
+	
+				// face 1 go to fase 4
+				Cube[0][0][4] = Cube[2][0][1];
+				Cube[1][0][4] = Cube[2][1][1];
+				Cube[2][0][4] = Cube[2][2][1];
+	
+				// save the values of face 3
+				int temp4 = Cube[0][0][3];
+				int temp5 = Cube[1][0][3];
+				int temp6 = Cube[2][0][3];
+	
+				// face 4 go to face 3
+				Cube[0][0][3] = temp1;
+				Cube[1][0][3] = temp2;
+				Cube[2][0][3] = temp3;
+	
+				// save the values of face 5
+				temp1 = Cube[0][0][5];
+				temp2 = Cube[1][0][5];
+				temp3 = Cube[2][0][5];
+	
+				// face 3 to face 5
+				Cube[0][0][5] = temp4;
+				Cube[1][0][5] = temp5;
+				Cube[2][0][5] = temp6;
+	
+				// face 5 to 1
+				Cube[2][0][1] = temp1;
+				Cube[2][1][1] = temp2;
+				Cube[2][2][1] = temp3;
+	
+				// rotation of face 0
+				rotate(Cube, 0, "right");
 			}
-
 		}
-
-
-
+		public void rotate(int[][][] Cube, int face, String direction) {
+			if (direction.equals("right")) {
+				for (int i = 0; i < 3; i++) {
+					for (int y = i; y < 3; y++) {
+						int temp = Cube[i][y][face];
+						Cube[i][y][face] = Cube[y][i][face];
+						Cube[y][i][face] = temp;
+					}
+				}
+				for (int i = 0; i < 3; i++) {
+					int low = 0;
+					int high = 2;
+					while (low < high) {
+						int temp = Cube[i][low][face];
+						Cube[i][low][face] = Cube[i][high][face];
+						Cube[i][high][face] = temp;
+						low++;
+						high--;
+					}
+				}
+	
+			}
+	
+			if (direction.equals("left")) {
+				for (int i = 0; i < 3; i++) {
+					for (int y = i; y < 3; y++) {
+						int temp = Cube[i][y][face];
+						Cube[i][y][face] = Cube[y][i][face];
+						Cube[y][i][face] = temp;
+					}
+				}
+				for (int i = 0; i < 3; i++) {
+					int low = 0;
+					int high = 2;
+					while (low < high) {
+						int temp = Cube[low][i][face];
+						Cube[low][i][face] = Cube[high][i][face];
+						Cube[high][i][face] = temp;
+						low++;
+						high--;
+					}
+				}
+			}
+	
+		}
 	}
