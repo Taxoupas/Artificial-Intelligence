@@ -14,14 +14,13 @@ public class main {
 		System.out.println(cb.Colours.get(6));
 		
 		cb.print_cube();
-		String direction = "Right";
-		cb.horizontal_middle(direction);
+		String direction = "down";
+		cb.vertical_left(direction);
 		System.out.println("\n");
 		cb.print_cube();
 
 	}
 
 }
-
 
         

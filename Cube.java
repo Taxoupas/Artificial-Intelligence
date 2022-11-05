@@ -66,13 +66,101 @@ public class Cube {
         
 		
         public void vertical_left(String direction) {
+        	
+        	int temp1,temp2,temp3,temp4,temp5,temp6,temp7,temp8,temp9;
 
 			if (direction == "up"){
 				
+				temp1 = Cube[0][0][1];
+				temp2= Cube[1][0][1];
+				temp3 = Cube[2][0][1];
 
+				Cube[0][0][1] = Cube[0][0][0];
+				Cube[1][0][1] = Cube[1][0][0];
+				Cube[2][0][1] = Cube[2][0][0];
+
+				temp4 = Cube[0][0][2];
+			 	temp5 = Cube[1][0][2];
+			    temp6 = Cube[2][0][2];
+
+				Cube[2][0][2] = temp1;
+				Cube[1][0][2] = temp2;
+				Cube[0][0][2] = temp3;
+
+				temp7 = Cube[0][0][3];
+				temp8 = Cube[1][0][3];
+				temp9 = Cube[2][0][3];
+
+				Cube[2][0][3] = temp4; 
+				Cube[1][0][3] = temp5;
+				Cube[0][0][3] = temp6;
+
+				Cube[0][0][0] = temp7;
+				Cube[1][0][0] = temp8;
+				Cube[2][0][0] = temp9;
+				
+				temp1 = Cube[2][0][5];
+				Cube[2][0][5] = Cube[0][0][5];
+				temp2 = Cube[2][2][5];
+				Cube[2][2][5] = temp1;
+				temp3 = Cube[0][2][5];
+				Cube[0][2][5] = temp2;
+				Cube[0][0][5] = temp3;
+				temp4 = Cube[2][1][5];
+				Cube[2][1][5] = Cube[1][0][5];
+				temp5 = Cube[1][2][5];
+				Cube[1][2][5] = temp4;
+				temp6 = Cube[0][1][5];
+				Cube[0][1][5] = temp5;
+				Cube[1][0][5] = temp6;
+				
 			
 			}else if(direction == "down"){
+				
+				temp1 = Cube[0][0][3];
+				temp2 = Cube[1][0][3];
+				temp3 = Cube[2][0][3];
 
+				Cube[0][0][3] = Cube[0][0][0];
+				Cube[1][0][3] = Cube[1][0][0];
+				Cube[2][0][3] = Cube[2][0][0];
+
+				temp4 = Cube[0][0][2];
+			 	temp5 = Cube[1][0][2];
+			    temp6 = Cube[2][0][2];
+
+				Cube[2][0][2] = temp1;
+				Cube[1][0][2] = temp2;
+				Cube[0][0][2] = temp3;
+
+				temp7 = Cube[0][0][1];
+				temp8 = Cube[1][0][1];
+				temp9 = Cube[2][0][1];
+
+				Cube[2][0][1] = temp4; 
+				Cube[1][0][1] = temp5;
+				Cube[0][0][1] = temp6;
+
+				Cube[0][0][0] = temp7;
+				Cube[1][0][0] = temp8;
+				Cube[2][0][0] = temp9;
+				
+				temp1 = Cube[0][2][5];
+				Cube[0][2][5] = Cube[0][0][5];
+				temp2 = Cube[2][2][5];
+				Cube[2][2][5] = temp1;
+				temp3 = Cube[2][0][5];
+				Cube[2][0][5] = temp2;
+				Cube[0][0][5] = temp3;
+				temp4 = Cube[0][1][5];
+				Cube[0][1][5] = Cube[1][0][5];
+				temp5 = Cube[1][2][5];
+				Cube[1][2][5] = temp4;
+				temp6 = Cube[2][1][5];
+				Cube[2][1][5] = temp5;
+				Cube[1][0][5] = temp6;
+				
+				
 			}
 		}
 
@@ -146,13 +234,69 @@ public class Cube {
 
         public void vertical_right(String direction) {
         	
-        	
+        	int temp1,temp2,temp3,temp4,temp5,temp6,temp7,temp8,temp9;
         	
 			if (direction == "up"){
 				
+				temp1 = Cube[0][2][1];
+				temp2= Cube[1][2][1];
+				temp3 = Cube[2][2][1];
+
+				Cube[0][2][1] = Cube[0][2][0];
+				Cube[1][2][1] = Cube[1][2][0];
+				Cube[2][2][1] = Cube[2][2][0];
+
+				temp4 = Cube[0][2][2];
+			 	temp5 = Cube[1][2][2];
+			    temp6 = Cube[2][2][2];
+
+				Cube[2][2][2] = temp1;
+				Cube[1][2][2] = temp2;
+				Cube[0][2][2] = temp3;
+
+				temp7 = Cube[0][2][3];
+				temp8 = Cube[1][2][3];
+				temp9 = Cube[2][2][3];
+
+				Cube[2][2][3] = temp4; 
+				Cube[1][2][3] = temp5;
+				Cube[0][2][3] = temp6;
+
+				Cube[0][2][0] = temp7;
+				Cube[1][2][0] = temp8;
+				Cube[2][2][0] = temp9;
+				
 
 			}else if(direction == "down"){
+				
+				temp1 = Cube[0][2][3];
+				temp2 = Cube[1][2][3];
+				temp3 = Cube[2][2][3];
 
+				Cube[0][2][3] = Cube[0][2][0];
+				Cube[1][2][3] = Cube[1][2][0];
+				Cube[2][2][3] = Cube[2][2][0];
+
+				temp4 = Cube[0][2][2];
+			 	temp5 = Cube[1][2][2];
+			    temp6 = Cube[2][2][2];
+
+				Cube[2][2][2] = temp1;
+				Cube[1][2][2] = temp2;
+				Cube[0][2][2] = temp3;
+
+				temp7 = Cube[0][2][1];
+				temp8 = Cube[1][2][1];
+				temp9 = Cube[2][2][1];
+
+				Cube[2][2][1] = temp4; 
+				Cube[1][2][1] = temp5;
+				Cube[0][2][1] = temp6;
+
+				Cube[0][2][0] = temp7;
+				Cube[1][2][0] = temp8;
+				Cube[2][2][0] = temp9;
+				
 			}
 			
 		}
@@ -493,6 +637,10 @@ public class Cube {
 			}
 
 		}
+
+
+
+
 
 
 
