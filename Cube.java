@@ -34,7 +34,24 @@ public class Cube {
 	                
 	            }
 	        }
+			for (int z = 0; z < 6; z++) {
+				current[z] = Cube[1][1][z]; // store current colours
+			}
 	    }
+		double num_of_wrong_titles() {
+			double counter = 0; // number of misplaced tiles
+			for (int z = 0; z < 6; z++) {
+				for (int x = 0; x < 3; x++) {
+					for (int y = 0; y < 3; y++) {
+						if (Cube[x][y][z] != current[z]) {
+							counter++;
+						}
+					}
+				}
+			}
+	
+			return counter / 3;
+		}
 
 	    public int GetColour(int x, int y, int z) {
 
